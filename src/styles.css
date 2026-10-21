@@ -218,3 +218,8 @@ body {margin:0}
 .featured-study-logo{background:#f6f7fa;color:#3a6d00;gap:18px}
 .featured-study-logo img{display:block;width:min(82%,290px);height:auto;object-fit:contain}
 .featured-study-logo span{color:#50701d}
+
+/* Local figure 6b is pre-cropped. Display in full with no positional offset. */
+.micrograph-crop{aspect-ratio:1511/540;overflow:hidden;background:#d1d1d1}
+.micrograph-crop img{position:static!important;width:100%!important;height:100%!important;object-fit:contain!important;max-width:100%!important;left:auto!important;top:auto!important;filter:none!important}
+@media(max-width:760px){.micrograph-crop{aspect-ratio:1511/540}}
