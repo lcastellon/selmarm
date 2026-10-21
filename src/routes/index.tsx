@@ -275,12 +275,10 @@ function Index() {
         </div>
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
-          <div className="hero-bioactive-art" role="img" aria-label={language === "es" ? "Ilustración conceptual de hojas y moléculas vegetales" : "Conceptual illustration of plant leaves and molecules"}>
-              <div className="bioactive-orbit"><span className="molecule m1"/><span className="molecule m2"/><span className="molecule m3"/><span className="molecule m4"/></div>
-              <Leaf className="bioactive-leaf leaf-one" strokeWidth={0.65}/><Leaf className="bioactive-leaf leaf-two" strokeWidth={0.65}/><Leaf className="bioactive-leaf leaf-three" strokeWidth={0.65}/>
-              <FlaskConical className="bioactive-flask" strokeWidth={0.7}/>
-              <span className="bioactive-label">PLANT METABOLITES · 2026</span>
-            </div>
+          <div className="hero-botanical-photo" role="img" aria-label={language === "es" ? "Fotografía botánica de hojas verdes, imagen provisional" : "Botanical photograph of green leaves, temporary image"}>
+            <div className="hero-botanical-overlay" aria-hidden="true" />
+            <span className="hero-botanical-note">PLANT BIOTECHNOLOGY / 2026</span>
+          </div>
           <div className="visual-caption"><span><span>{language === "es" ? "Plantas y metabolitos bioactivos" : "Plants and bioactive metabolites"}</span><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
         </div>
       </section>
