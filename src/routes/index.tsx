@@ -79,9 +79,9 @@ const copy = {
     galleryTitle: "Trayectoria: del musgo a la bioactividad.",
     galleryIntro: "",
     galleryItems: [
-      { tag: "01 / ", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "02 / ", title: "Propagación in vitro", description: "Imagen de trabajo en laboratorio.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
-      { tag: "03 / ", title: "Protonema", description: "Imagen de referencia del sitio Moss Genomics; identificación de especie no confirmada.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
+      { tag: "", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
+      { tag: "", title: "Propagación in vitro", description: "Imagen de trabajo en laboratorio.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
+      { tag: "", title: "Protonema", description: "Imagen de referencia del sitio Moss Genomics; identificación de especie no confirmada.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Consultar artículo original",
     papersKicker: "05 / ARCHIVO CIENTÍFICO",
@@ -151,9 +151,9 @@ const copy = {
     galleryTitle: "Research trajectory: from moss to bioactivity.",
     galleryIntro: "",
     galleryItems: [
-      { tag: "01 / ", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "02 / ", title: "In vitro propagation", description: "Laboratory work image.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
-      { tag: "03 / ", title: "Protonema", description: "Reference image from Moss Genomics; species identification has not been confirmed.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
+      { tag: "", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
+      { tag: "", title: "In vitro propagation", description: "Laboratory work image.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
+      { tag: "", title: "Protonema", description: "Reference image from Moss Genomics; species identification has not been confirmed.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Read original paper",
     papersKicker: "05 / SCIENTIFIC ARCHIVE",
@@ -357,7 +357,7 @@ function Index() {
             <div className={`gallery-photo ${item.isFigure?"gallery-published":""}`}>
               <img src={item.url} loading="lazy" alt={item.title} />
             </div>
-            <figcaption><span>{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p>
+            <figcaption><h3>{item.title}</h3><p>{item.description}</p>
             {item.source && <a href={item.source} target="_blank" rel="noopener noreferrer">{t.galleryCitation} <ArrowUpRight size={15}/></a>}</figcaption>
           </figure>)}
         </div>
