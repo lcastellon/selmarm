@@ -164,3 +164,11 @@ body {margin:0}
 .academic-contact-form .button-light{align-self:start;border:none;cursor:pointer;margin-top:4px}
 .academic-contact-form .button-light:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .academic-contact-form .form-status{font-size:11px;color:#b9cbbb;line-height:1.65;margin:0}
+
+
+/* Moss Genomics-inspired contact fields */
+.contact-form-row{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.academic-contact-form select{background:#1d3c2e;border:1px solid #78927c7a;border-radius:3px;padding:13px 14px;color:#fff;font:13px Manrope,sans-serif;width:100%;outline:none}
+.academic-contact-form select:focus{border-color:#d5e8c4;box-shadow:0 0 0 2px #d5e8c424}
+.academic-contact-form .contact-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+@media(max-width:760px){.contact-form-row{grid-template-columns:1fr}}
