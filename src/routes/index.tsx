@@ -315,13 +315,15 @@ function Index() {
                 <span>{step.number}</span><strong>{step.title}</strong><ArrowUpRight size={20}/>
               </button>)}
             </div>
+            {(() => { const active = t.storySteps[storyStep] ?? t.storySteps[0]; if (!active) return null; return (
             <article className="story-detail" id="story-panel" role="tabpanel" aria-labelledby={`story-tab-${storyStep}`}>
-              <span className="story-detail-number">{t.storySteps[storyStep].number} / 03</span>
-              <h3>{t.storySteps[storyStep].title}</h3>
-              <p><ScientificText text={t.storySteps[storyStep].body}/></p>
-              <p><ScientificText text={t.storySteps[storyStep].detail}/></p>
-              <a className="story-article-link" href={t.storySteps[storyStep].link} target="_blank" rel="noopener noreferrer">{t.storySteps[storyStep].linkText} <ArrowUpRight size={16}/></a>
+              <span className="story-detail-number">{active.number} / 03</span>
+              <h3>{active.title}</h3>
+              <p><ScientificText text={active.body}/></p>
+              <p><ScientificText text={active.detail}/></p>
+              <a className="story-article-link" href={active.link} target="_blank" rel="noopener noreferrer">{active.linkText} <ArrowUpRight size={16}/></a>
             </article>
+            ); })()}
           </div>
         </div>
       </section>
