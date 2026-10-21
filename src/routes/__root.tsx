@@ -79,10 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Dra. Selma Ríos Meléndez" },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Dra. Selma Ríos Meléndez" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
