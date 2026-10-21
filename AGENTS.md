@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+Scientific names (Latin binomials) must always render in italics: pass page copy through the shared renderer in `src/components/scientific-text.tsx` and register new taxa in its name list, so a name never appears as plain text in a new string.
