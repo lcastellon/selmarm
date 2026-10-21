@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, X } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, FlaskConical, Leaf, Menu, X } from "lucide-react";
 import { ScientificText } from "@/components/scientific-text";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
