@@ -37,7 +37,7 @@ const copy = {
     nav: ["Visión", "Investigación", "Publicaciones", "Contacto"],
     eyebrow: "BIOTECNOLOGÍA VEGETAL",
     subheading: "Ciencia de la vida vegetal",
-    heading: "Descifrar la resistencia de las plantas.",
+    heading: "Descifrando la resistencia de las plantas.",
     intro: "Desde los mecanismos moleculares de los musgos tolerantes a la desecación hasta las respuestas de los cultivos al estrés hídrico: una mirada al lenguaje de la adaptación vegetal.",
     explore: "Explorar investigación",
     scholar: "Perfil en Google Académico",
