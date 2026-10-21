@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, X } from "lucide-react";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
+const FIGURE_ONE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
 const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig6_HTML.png";
 const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 
@@ -30,9 +31,9 @@ const copy = {
     explore: "Explorar investigación",
     scholar: "Perfil en Google Académico",
     scroll: "DESPLAZARSE PARA EXPLORAR",
-    figure: "FIG. 01 / FORMAS DE RESILIENCIA",
+    figure: "FIG. 01A / GAMETÓFITO HIDRATADO",
     specimen: "Pseudocrossidium replicatum",
-    specimenDesc: "Musgo tolerante a la desecación · modelo de estudio",
+    specimenDesc: "Gametófito hidratado · Ríos-Meléndez et al. (2021), fig. 1a",
     visionKicker: "01 / PERSPECTIVA",
     visionTitle: "La vida encuentra formas de persistir.",
     visionText: "La investigación de la Dra. Selma Ríos Meléndez aborda procesos biológicos asociados a la respuesta de las plantas frente a condiciones ambientales adversas. Su producción científica explora genomas de organelos, mecanismos de regulación génica y tolerancia al déficit hídrico.",
@@ -73,9 +74,9 @@ const copy = {
     explore: "Explore research",
     scholar: "Google Scholar profile",
     scroll: "SCROLL TO EXPLORE",
-    figure: "FIG. 01 / FORMS OF RESILIENCE",
+    figure: "FIG. 01A / HYDRATED GAMETOPHYTE",
     specimen: "Pseudocrossidium replicatum",
-    specimenDesc: "Desiccation-tolerant moss · study organism",
+    specimenDesc: "Hydrated gametophyte · Ríos-Meléndez et al. (2021), fig. 1a",
     visionKicker: "01 / PERSPECTIVE",
     visionTitle: "Life finds ways to persist.",
     visionText: "Dr. Selma Ríos Meléndez investigates biological processes involved in plant responses to challenging environmental conditions. Her scientific publications explore organelle genomes, gene regulation mechanisms, and tolerance to water deficit.",
@@ -200,7 +201,7 @@ function Index() {
         </div>
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
-          <BotanicalPlate/>
+          <a className="hero-science-image" href={ARTICLE} target="_blank" rel="noopener noreferrer" aria-label="Fuente científica: figura 1a"><img src={FIGURE_ONE} alt={language === "es" ? "Gametófito hidratado de Pseudocrossidium replicatum, figura científica 1a" : "Hydrated Pseudocrossidium replicatum gametophyte, scientific figure 1a"} /></a>
           <div className="visual-caption"><span><i>{t.specimen}</i><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
         </div>
       </section>
