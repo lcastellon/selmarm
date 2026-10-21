@@ -12,7 +12,7 @@ const CONTACT_EMAIL = "sriosm@ipn.mx";
 // figure-only labels (t.figure, t.specimen/t.specimenDesc) plus the article
 // link that wraps the image.
 const HERO_IMAGE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
-const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig6_HTML.png";
+const FIGURE_SIX = "/figure-6b.webp";
 const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 const QPCR_ARTICLE = "https://doi.org/10.3390/plants14121752";
 const ANTIMICROBIAL_ARTICLE = "https://doi.org/10.3390/plants15020193";
