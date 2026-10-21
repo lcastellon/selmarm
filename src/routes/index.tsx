@@ -12,6 +12,9 @@ const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
 const HERO_IMAGE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
 const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig6_HTML.png";
 const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
+const QPCR_ARTICLE = "https://doi.org/10.3390/plants14121752";
+const MOSS_ASSET = "https://raw.githubusercontent.com/lcastellon/mossgenomics/main/src/assets/";
+
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -60,12 +63,30 @@ const copy = {
     focus: "ORGANISMO DE ESTUDIO",
     focusTitle: "Un musgo. Muchas preguntas.",
     focusText: "Pseudocrossidium replicatum ofrece una ventana a la extraordinaria capacidad de ciertos organismos vegetales para tolerar la desecación. Sus organelos y mecanismos de expresión génica han sido objeto de publicaciones científicas.",
-    papersKicker: "03 / ARCHIVO CIENTÍFICO",
+    storyKicker: "03 / CIENCIA EXPLICADA",
+    storyTitle: "La vida después de la desecación.",
+    storyIntro: "Una ruta para explorar cómo el musgo, sus tejidos y sus mecanismos moleculares ayudan a comprender la tolerancia a la pérdida de agua.",
+    storySteps: [
+      {number: "01", title: "El organismo", body: "Pseudocrossidium replicatum es un musgo que ofrece un modelo para investigar la tolerancia a la desecación.", detail: "La observación de gametófitos y protonema permite reconocer estructuras y respuestas visibles.", link: ARTICLE, linkText: "Investigación sobre tolerancia (2021)"},
+      {number: "02", title: "La respuesta al estrés", body: "La desecación constituye un estrés extremo. La investigación estudia mecanismos moleculares inducibles ante estas condiciones.", detail: "Las figuras experimentales ayudan a conectar la morfología de sus tejidos con los procesos fisiológicos.", link: ARTICLE, linkText: "Leer estudio experimental (2021)"},
+      {number: "03", title: "Los genes", body: "La medición de expresión génica permite estudiar la regulación molecular. La validación de genes de referencia es esencial para RT-qPCR.", detail: "Un artículo de 2025 identifica y evalúa genes de referencia en el tejido protonemal de esta especie.", link: QPCR_ARTICLE, linkText: "Consultar publicación RT-qPCR (2025)"},
+    ],
+    storyPublication: "Explorar la publicación relacionada",
+    galleryKicker: "04 / ATLAS VISUAL",
+    galleryTitle: "El organismo, de cerca.",
+    galleryIntro: "Galería contextual con una figura de investigación publicada y fotografías de referencia utilizadas en Moss Genomics. Estas últimas no se presentan como documentación taxonómica confirmada de la especie.",
+    galleryItems: [
+      { tag: "01 / FIGURA CIENTÍFICA", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
+      { tag: "02 / IMAGEN DE REFERENCIA", title: "Cultivo en caja de Petri", description: "Fotografía ilustrativa del trabajo con material vegetal en laboratorio; identificación de especie no confirmada.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
+      { tag: "03 / IMAGEN DE REFERENCIA", title: "Protonema", description: "Imagen de referencia del sitio Moss Genomics; identificación de especie no confirmada.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
+    ],
+    galleryCitation: "Consultar artículo original",
+    papersKicker: "05 / ARCHIVO CIENTÍFICO",
     papersTitle: "Ideas publicadas, conocimiento compartido.",
     papersIntro: "Selección de trabajos. Los títulos y datos bibliográficos se conservan en su idioma original; consulta el perfil académico para acceder a la lista actualizada.",
     allPapers: "Ver todas en Google Académico",
     journal: "REVISTA / REFERENCIA",
-    contactKicker: "04 / CONTACTO",
+    contactKicker: "06 / CONTACTO",
     contactTitle: "La ciencia crece en colaboración.",
     contactText: "Para consultar publicaciones, líneas de investigación y actividad académica, visita el perfil científico de la Dra. Selma Ríos Meléndez.",
     contactButton: "Abrir perfil académico",
@@ -103,12 +124,30 @@ const copy = {
     focus: "STUDY ORGANISM",
     focusTitle: "One moss. Many questions.",
     focusText: "Pseudocrossidium replicatum offers a window into the remarkable ability of certain plants to withstand desiccation. Its organelles and gene-expression mechanisms have been investigated in scientific publications.",
-    papersKicker: "03 / SCIENTIFIC ARCHIVE",
+    storyKicker: "03 / SCIENCE EXPLAINED",
+    storyTitle: "Life after desiccation.",
+    storyIntro: "A visual journey exploring how moss structure, tissues, and molecular mechanisms help researchers understand tolerance to water loss.",
+    storySteps: [
+      {number: "01", title: "The organism", body: "Pseudocrossidium replicatum is a moss that provides a model for studying desiccation tolerance.", detail: "Observing gametophytes and protonema helps reveal visible structures and responses.", link: ARTICLE, linkText: "Desiccation-tolerance research (2021)"},
+      {number: "02", title: "Stress response", body: "Desiccation is an extreme stress. Research investigates inducible molecular mechanisms under these conditions.", detail: "Experimental figures help connect tissue morphology with underlying physiological processes.", link: ARTICLE, linkText: "Read experimental study (2021)"},
+      {number: "03", title: "The genes", body: "Gene-expression measurements help investigate molecular regulation. Reference-gene validation is fundamental to RT-qPCR.", detail: "A 2025 paper identifies and evaluates reference genes in the species' protonemal tissue.", link: QPCR_ARTICLE, linkText: "RT-qPCR publication (2025)"},
+    ],
+    storyPublication: "Explore related paper",
+    galleryKicker: "04 / VISUAL ATLAS",
+    galleryTitle: "A closer look at the organism.",
+    galleryIntro: "A contextual gallery featuring a published research figure and reference photographs used by Moss Genomics. The latter are not presented as confirmed taxonomic documentation of this species.",
+    galleryItems: [
+      { tag: "01 / SCIENTIFIC FIGURE", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
+      { tag: "02 / REFERENCE IMAGE", title: "Petri-dish culture", description: "Illustrative photograph of laboratory plant material; species identification has not been confirmed.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
+      { tag: "03 / REFERENCE IMAGE", title: "Protonema", description: "Reference image from Moss Genomics; species identification has not been confirmed.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
+    ],
+    galleryCitation: "Read original paper",
+    papersKicker: "05 / SCIENTIFIC ARCHIVE",
     papersTitle: "Published ideas, shared knowledge.",
     papersIntro: "Selected publications. Titles and bibliographic details remain in their original language; consult the academic profile for the latest list.",
     allPapers: "View all on Google Scholar",
     journal: "JOURNAL / REFERENCE",
-    contactKicker: "04 / CONTACT",
+    contactKicker: "06 / CONTACT",
     contactTitle: "Science grows through collaboration.",
     contactText: "For publications, research topics, and academic activities, visit Dr. Selma Ríos Meléndez’s scientific profile.",
     contactButton: "Open academic profile",
@@ -164,6 +203,7 @@ function BotanicalPlate() {
 function Index() {
   const [language, setLanguage] = useState<Language>("es");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [storyStep, setStoryStep] = useState(0);
   useEffect(() => {
     const stored = window.localStorage.getItem("selma-language");
     if (stored === "es" || stored === "en") setLanguage(stored);
@@ -242,6 +282,42 @@ function Index() {
           <div className="micrograph-caption"><span><ScientificText text={t.microscopyCaption}/></span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
         </div>
         <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p><ScientificText text={t.focusText}/></p><div className="focus-scientific"><span><ScientificText text={t.specimen}/></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
+      </section>
+
+
+      <section className="story-section" id="desecacion">
+        <div className="section-container">
+          <div className="section-kicker">{t.storyKicker}</div>
+          <div className="section-heading"><h2>{t.storyTitle}</h2><p>{t.storyIntro}</p></div>
+          <div className="story-layout">
+            <div className="story-step-list" role="tablist" aria-label={t.storyTitle}>
+              {t.storySteps.map((step,i) => <button key={step.number} type="button" role="tab" id={`story-tab-${i}`} aria-controls="story-panel" aria-selected={storyStep===i} className={`story-tab ${storyStep===i?"selected":""}`} onClick={() => setStoryStep(i)}>
+                <span>{step.number}</span><strong>{step.title}</strong><ArrowUpRight size={20}/>
+              </button>)}
+            </div>
+            <article className="story-detail" id="story-panel" role="tabpanel" aria-labelledby={`story-tab-${storyStep}`}>
+              <span className="story-detail-number">{t.storySteps[storyStep].number} / 03</span>
+              <h3>{t.storySteps[storyStep].title}</h3>
+              <p><ScientificText text={t.storySteps[storyStep].body}/></p>
+              <p><ScientificText text={t.storySteps[storyStep].detail}/></p>
+              <a className="story-article-link" href={t.storySteps[storyStep].link} target="_blank" rel="noopener noreferrer">{t.storySteps[storyStep].linkText} <ArrowUpRight size={16}/></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="gallery-section section-container" id="galeria">
+        <div className="section-kicker">{t.galleryKicker}</div>
+        <div className="section-heading"><h2>{t.galleryTitle}</h2><p>{t.galleryIntro}</p></div>
+        <div className="science-gallery">
+          {t.galleryItems.map((item, i) => <figure className="gallery-item" key={item.tag}>
+            <div className={`gallery-photo ${item.isFigure?"gallery-published":""}`}>
+              <img src={item.url} loading="lazy" alt={item.title} />
+            </div>
+            <figcaption><span>{item.tag}</span><h3>{item.title}</h3><p>{item.description}</p>
+            {item.source && <a href={item.source} target="_blank" rel="noopener noreferrer">{t.galleryCitation} <ArrowUpRight size={15}/></a>}</figcaption>
+          </figure>)}
+        </div>
       </section>
 
       <section id="publicaciones" className="publications-section section-container">
