@@ -160,8 +160,8 @@ const copy = {
 const publications = [
   { title: "Stress-induced plant specialized metabolism: signaling, multi-omics integration, and plant-derived antimicrobial metabolites", journal: "Plants 15 (2), 193", year: 2026 },
   { title: "Effect of Essential Oils on Postharvest Management of Anthracnose Associated with Colletotrichum gloeosporioides in Mango", journal: "Plants 14 (21), 3249", year: 2025 },
-  { title: "Selection and Validation of Reference Genes for RT-qPCR in Protonemal Tissue of Pseudocrossidium replicatum", journal: "Plants 14 (12), 1752", year: 2025 },
-  { title: "Pseudocrossidium replicatum is a fully desiccation-tolerant moss that expresses an inducible molecular mechanism in response to severe stress", journal: "Plant Molecular Biology 107 (4), 387–404", year: 2021 },
+  { title: "Selection and Validation of Reference Genes for RT-qPCR in Protonemal Tissue of Pseudocrossidium replicatum", journal: "Plants 14 (12), 1752", year: 2025, doi: QPCR_ARTICLE },
+  { title: "Pseudocrossidium replicatum is a fully desiccation-tolerant moss that expresses an inducible molecular mechanism in response to severe stress", journal: "Plant Molecular Biology 107 (4), 387–404", year: 2021, doi: ARTICLE },
   { title: "Genome-wide transcriptional changes triggered by water deficit on a drought-tolerant common bean cultivar", journal: "BMC Plant Biology 20 (1), 525", year: 2020 },
   { title: "The mitogenome of Pseudocrossidium replicatum, a desiccation-tolerant moss", journal: "Mitochondrial DNA Part B 5 (3), 2339–2341", year: 2020 },
   { title: "The chloroplast genome of the desiccation-tolerant moss Pseudocrossidium replicatum (Taylor) R.H. Zander", journal: "Genetics and Molecular Biology 42, 488–493", year: 2019 },
@@ -327,7 +327,7 @@ function Index() {
           {publications.map((pub, i) => <article key={pub.title} className="publication-row">
             <div className="publication-year">{pub.year}</div>
             <div className="publication-content"><span className="publication-index">RESEARCH PAPER / {String(i+1).padStart(2,"0")}</span><h3><ScientificText text={pub.title}/></h3><p>{pub.journal}</p></div>
-            <a href={SCHOLAR} target="_blank" rel="noopener noreferrer" aria-label={`Find publication on Google Scholar: ${pub.title}`} className="publication-action"><ArrowUpRight size={21}/></a>
+            <a href={"doi" in pub && pub.doi ? pub.doi : SCHOLAR} target="_blank" rel="noopener noreferrer" aria-label={`Open publication: ${pub.title}`} className="publication-action"><ArrowUpRight size={21}/></a>
           </article>)}
         </div>
         <p className="publication-note"><BookOpen size={15}/> {language === "es" ? "La disponibilidad y las métricas de cada publicación se consultan en el perfil de Google Académico." : "Publication availability and citation metrics can be consulted on Google Scholar."}</p>
