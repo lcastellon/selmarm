@@ -152,3 +152,15 @@ body {margin:0}
 .footer-links-grid li a:hover,.footer-links-grid li a:focus-visible{color:#c9e79b;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:760px){.footer-links-grid{grid-template-columns:1fr 1fr;gap:36px 24px;padding-bottom:45px}.footer-profile{grid-column:1/-1}.footer-profile h3{font-size:25px}}
 @media(max-width:390px){.footer-links-grid{grid-template-columns:1fr}.footer-profile{grid-column:auto}}
+
+
+/* Academic contact form */
+.contact-main{align-items:start}
+.contact-lede{margin-top:29px!important;max-width:470px!important}
+.academic-contact-form{display:flex;flex-direction:column;gap:17px;width:100%}
+.academic-contact-form label{display:flex;flex-direction:column;gap:9px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#d6e5d5}
+.academic-contact-form input,.academic-contact-form textarea{background:#ffffff0c;border:1px solid #78927c7a;border-radius:3px;padding:13px 14px;color:#fff;font:13px Manrope,sans-serif;outline:none;width:100%;resize:vertical;letter-spacing:normal}
+.academic-contact-form input:focus,.academic-contact-form textarea:focus{border-color:#d5e8c4;box-shadow:0 0 0 2px #d5e8c424}
+.academic-contact-form .button-light{align-self:start;border:none;cursor:pointer;margin-top:4px}
+.academic-contact-form .button-light:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.academic-contact-form .form-status{font-size:11px;color:#b9cbbb;line-height:1.65;margin:0}
