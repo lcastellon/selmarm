@@ -93,6 +93,16 @@ const copy = {
     footer: "Biotecnología vegetal · Investigación científica",
     rights: "Sitio académico",
     langLabel: "Idioma del sitio",
+    footerNavigation: "Navegación",
+    footerInstitutional: "Enlaces institucionales",
+    footerProfile: "Perfil científico",
+    footerDescription: "Investigación en biotecnología vegetal, adaptación y expresión génica.",
+    footerModel: "Modelo de estudio",
+    footerResearch: "Investigación",
+    footerStory: "Desecación",
+    footerGallery: "Galería científica",
+    footerPublications: "Publicaciones",
+    footerContact: "Contacto",
   },
   en: {
     nav: ["Perspective", "Research", "Publications", "Contact"],
@@ -154,6 +164,16 @@ const copy = {
     footer: "Plant biotechnology · Scientific research",
     rights: "Academic website",
     langLabel: "Website language",
+    footerNavigation: "Navigation",
+    footerInstitutional: "Institutional links",
+    footerProfile: "Scientific profile",
+    footerDescription: "Research in plant biotechnology, adaptation, and gene expression.",
+    footerModel: "Study organism",
+    footerResearch: "Research",
+    footerStory: "Desiccation",
+    footerGallery: "Scientific gallery",
+    footerPublications: "Publications",
+    footerContact: "Contact",
   },
 };
 
@@ -337,6 +357,33 @@ function Index() {
         <div className="section-container contact-inner">
           <div className="section-kicker">{t.contactKicker}</div>
           <div className="contact-main"><h2>{t.contactTitle}</h2><div><p>{t.contactText}</p><a className="button-light" href={SCHOLAR} target="_blank" rel="noopener noreferrer">{t.contactButton}<ExternalLink size={17}/></a></div></div>
+          <div className="footer-links-grid">
+            <div className="footer-profile">
+              <span className="footer-eyebrow">{t.footerProfile}</span>
+              <h3>Dra. Selma Ríos Meléndez</h3>
+              <p>{t.footerDescription}</p>
+              <p className="footer-model">{t.footerModel}: <ScientificText text="Pseudocrossidium replicatum" /></p>
+            </div>
+            <nav aria-label={t.footerNavigation}>
+              <span className="footer-eyebrow">{t.footerNavigation}</span>
+              <ul>
+                <li><a href="#inicio">{language === "es" ? "Inicio" : "Home"}</a></li>
+                <li><a href="#investigacion">{t.footerResearch}</a></li>
+                <li><a href="#desecacion">{t.footerStory}</a></li>
+                <li><a href="#galeria">{t.footerGallery}</a></li>
+                <li><a href="#publicaciones">{t.footerPublications}</a></li>
+                <li><a href="#contacto">{t.footerContact}</a></li>
+              </ul>
+            </nav>
+            <div>
+              <span className="footer-eyebrow">{t.footerInstitutional}</span>
+              <ul>
+                <li><a href="https://www.cibatlaxcala.ipn.mx/" target="_blank" rel="noopener noreferrer">CIBA Tlaxcala ↗</a></li>
+                <li><a href="https://www.ipn.mx/" target="_blank" rel="noopener noreferrer">Instituto Politécnico Nacional ↗</a></li>
+                <li><a href={SCHOLAR} target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></li>
+              </ul>
+            </div>
+          </div>
           <div className="footer-bottom"><span>© {new Date().getFullYear()} SELMA RÍOS MELÉNDEZ</span><span>{t.footer}</span><span>{t.rights} · ES / EN</span></div>
         </div>
       </footer>
