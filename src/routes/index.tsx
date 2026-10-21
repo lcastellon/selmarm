@@ -5,7 +5,7 @@ import { ScientificText } from "@/components/scientific-text";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
 // Set to the verified recipient email address before enabling form delivery.
-const CONTACT_EMAIL = "";
+const CONTACT_EMAIL = "sriosm@ipn.mx";
 // Hero block: reserved for the doctor's own portrait photo. It still shows
 // figure 1a from the 2021 paper, so swap HERO_IMAGE for the portrait when it
 // arrives, re-tune .hero-science-image for a vertical photo, and drop the
@@ -91,7 +91,7 @@ const copy = {
     contactKicker: "06 / CONTACTO",
     contactTitle: "La ciencia crece en colaboración.",
     contactText: "¿Te interesa una colaboración académica, hacer una consulta o conocer más sobre sus investigaciones? Envía tu mensaje mediante el formulario.",
-    formName: "Nombre", formEmail: "Correo electrónico", formSubject: "Asunto", formMessage: "Mensaje", formSend: "Preparar mensaje", formNote: "El formulario abrirá tu aplicación de correo para enviar el mensaje.", formRequired: "Completa todos los campos para continuar.",
+    formName: "Nombre", formInstitution: "Institución", formEmail: "Correo electrónico", formSubject: "Motivo del contacto", formMessage: "Mensaje", formSend: "Enviar mensaje", formNote: "Los mensajes se enviarán al correo institucional de la doctora mediante un servicio externo.", formSelect: "Selecciona una opción", formReasons: ["Colaboración científica", "Consulta académica", "Tesis o estancia", "Publicaciones", "Otro"],
     contactButton: "Abrir perfil académico",
     footer: "Biotecnología vegetal · Investigación científica",
     rights: "Sitio académico",
@@ -163,7 +163,7 @@ const copy = {
     contactKicker: "06 / CONTACT",
     contactTitle: "Science grows through collaboration.",
     contactText: "Interested in academic collaboration, have a question, or want to learn more about her research? Use the contact form below.",
-    formName: "Name", formEmail: "Email address", formSubject: "Subject", formMessage: "Message", formSend: "Prepare message", formNote: "The form will open your email application to send your message.", formRequired: "Complete all fields to continue.",
+    formName: "Name", formInstitution: "Institution", formEmail: "Email address", formSubject: "Reason for contact", formMessage: "Message", formSend: "Send message", formNote: "Messages are delivered to the researcher’s institutional email by an external form service.", formSelect: "Select an option", formReasons: ["Scientific collaboration", "Academic inquiry", "Thesis or research stay", "Publications", "Other"],
     contactButton: "Open academic profile",
     footer: "Plant biotechnology · Scientific research",
     rights: "Academic website",
@@ -228,7 +228,7 @@ function Index() {
   const [language, setLanguage] = useState<Language>("es");
   const [menuOpen, setMenuOpen] = useState(false);
   const [storyStep, setStoryStep] = useState(0);
-  const [contactForm, setContactForm] = useState({name:"",email:"",subject:"",message:""});
+
   useEffect(() => {
     const stored = window.localStorage.getItem("selma-language");
     if (stored === "es" || stored === "en") setLanguage(stored);
@@ -364,19 +364,19 @@ function Index() {
         <div className="section-container contact-inner">
           <div className="section-kicker">{t.contactKicker}</div>
           <div className="contact-main"><div><h2>{t.contactTitle}</h2><p className="contact-lede">{t.contactText}</p></div>
-            <form className="academic-contact-form" onSubmit={(event) => {
-              event.preventDefault();
-              if (!CONTACT_EMAIL) return;
-              const subject = encodeURIComponent(contactForm.subject);
-              const body = encodeURIComponent(`${contactForm.message}\n\n—\n${contactForm.name}\n${contactForm.email}`);
-              window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-            }}>
-              <label>{t.formName}<input required autoComplete="name" maxLength={120} value={contactForm.name} onChange={e=>setContactForm(v=>({...v,name:e.target.value}))} /></label>
-              <label>{t.formEmail}<input required type="email" autoComplete="email" maxLength={200} value={contactForm.email} onChange={e=>setContactForm(v=>({...v,email:e.target.value}))} /></label>
-              <label>{t.formSubject}<input required maxLength={200} value={contactForm.subject} onChange={e=>setContactForm(v=>({...v,subject:e.target.value}))} /></label>
-              <label>{t.formMessage}<textarea required rows={5} maxLength={5000} value={contactForm.message} onChange={e=>setContactForm(v=>({...v,message:e.target.value}))} /></label>
-              <button className="button-light" type="submit" disabled={!CONTACT_EMAIL}>{t.formSend} <ArrowUpRight size={18}/></button>
-              <p className="form-status" role="status">{CONTACT_EMAIL ? t.formNote : (language === "es" ? "Pendiente de configurar el correo de destino para habilitar el envío." : "A recipient email address must be configured before sending is enabled.")}</p>
+            <form className="academic-contact-form" action={`https://formsubmit.co/${CONTACT_EMAIL}`} method="POST">
+              <input type="hidden" name="_subject" value="Nuevo contacto desde la web de Dra. Selma Ríos Meléndez" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="contact-honey" aria-hidden="true" />
+              <div className="contact-form-row">
+                <label>{t.formName}<input name="name" required autoComplete="name" maxLength={100} /></label>
+                <label>{t.formInstitution}<input name="institution" autoComplete="organization" maxLength={100} /></label>
+              </div>
+              <label>{t.formEmail}<input required name="email" type="email" autoComplete="email" maxLength={255} /></label>
+              <label>{t.formSubject}<select name="reason" required defaultValue=""><option value="" disabled>{t.formSelect}</option>{t.formReasons.map(reason=><option key={reason} value={reason}>{reason}</option>)}</select></label>
+              <label>{t.formMessage}<textarea required name="message" rows={6} maxLength={2000} /></label>
+              <button className="button-light" type="submit">{t.formSend} <ArrowUpRight size={18}/></button>
+              <p className="form-status">{t.formNote}</p>
             </form>
           </div>
           <div className="footer-links-grid">
