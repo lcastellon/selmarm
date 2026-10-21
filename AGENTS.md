@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 Scientific names (Latin binomials) must always render in italics: pass page copy through the shared renderer in `src/components/scientific-text.tsx` and register new taxa in its name list, so a name never appears as plain text in a new string.
+
+Use the router-derived sitemap helper and explicit staticData.sitemap decisions on every route so public pages stay discoverable and non-content endpoints stay excluded without maintaining a duplicate URL list.
