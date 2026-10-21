@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, X } from "lucide-react";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
+const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig6_HTML.png";
+const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,6 +45,9 @@ const copy = {
       { tag: "03 / EXPRESIÓN GÉNICA", title: "Respuestas al estrés", desc: "Transcriptómica y herramientas de análisis molecular, incluyendo validación de genes de referencia." },
       { tag: "04 / BIOTECNOLOGÍA", title: "Metabolismo especializado", desc: "Compuestos vegetales y sus posibles aplicaciones en contextos biotecnológicos." },
     ],
+    microscopy: "MICROSCOPÍA / FIG. 6B · T₀",
+    microscopyCaption: "Filamento protonemal de P. replicatum antes de la exposición al ácido abscísico (ABA). Barra de escala: 100 µm.",
+    microscopySource: "Fuente: Ríos-Meléndez et al. (2021), figura 6b",
     focus: "ORGANISMO DE ESTUDIO",
     focusTitle: "Un musgo. Muchas preguntas.",
     focusText: "Pseudocrossidium replicatum ofrece una ventana a la extraordinaria capacidad de ciertos organismos vegetales para tolerar la desecación. Sus organelos y mecanismos de expresión génica han sido objeto de publicaciones científicas.",
@@ -83,6 +88,9 @@ const copy = {
       { tag: "03 / GENE EXPRESSION", title: "Stress responses", desc: "Transcriptomics and molecular analysis tools, including reference-gene validation." },
       { tag: "04 / BIOTECHNOLOGY", title: "Specialized metabolism", desc: "Plant-derived compounds and their potential biotechnological applications." },
     ],
+    microscopy: "MICROSCOPY / FIG. 6B · T₀",
+    microscopyCaption: "Protonemal filament of P. replicatum before exposure to abscisic acid (ABA). Scale bar: 100 µm.",
+    microscopySource: "Source: Ríos-Meléndez et al. (2021), figure 6b",
     focus: "STUDY ORGANISM",
     focusTitle: "One moss. Many questions.",
     focusText: "Pseudocrossidium replicatum offers a window into the remarkable ability of certain plants to withstand desiccation. Its organelles and gene-expression mechanisms have been investigated in scientific publications.",
@@ -217,7 +225,13 @@ function Index() {
       </section>
 
       <section className="focus-section">
-        <div className="focus-art"><div className="focus-ring"/><BotanicalPlate/><span className="focus-vertical">BOTANICAL STUDIES / 001</span></div>
+        <div className="focus-art">
+          <div className="micrograph-heading">{t.microscopy}</div>
+          <div className="micrograph-crop" role="img" aria-label={t.microscopyCaption}>
+            <img src={FIGURE_SIX} loading="lazy" alt="" />
+          </div>
+          <div className="micrograph-caption"><span>{t.microscopyCaption}</span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
+        </div>
         <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p>{t.focusText}</p><div className="focus-scientific"><span><i>Pseudocrossidium replicatum</i></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
       </section>
 
