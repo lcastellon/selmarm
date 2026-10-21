@@ -139,3 +139,16 @@ body {margin:0}
 .gallery-item h3{font-size:25px;line-height:1.15;margin:14px 0}.gallery-item p{font-size:12px;line-height:1.85;color:#66806e}
 .gallery-item a{display:inline-flex;gap:6px;align-items:center;font-size:11px;font-weight:700;color:#21583c;margin-top:15px;text-underline-offset:4px}
 @media(max-width:760px){.story-section{padding:76px 0 85px}.story-layout{grid-template-columns:1fr}.story-step-list{border-right:0;border-bottom:1px solid #b8caba}.story-tab{padding:22px}.story-detail{padding:28px;min-height:350px}.gallery-section{padding-top:78px;padding-bottom:70px}.science-gallery{grid-template-columns:1fr;gap:28px}.gallery-photo{height:280px}}
+
+
+/* Footer modeled on the useful three-column Moss Genomics navigation, with Selma's own visual language. */
+.footer-links-grid{display:grid;grid-template-columns:1.45fr 1fr 1fr;gap:clamp(25px,5vw,90px);padding:43px 0 65px;border-top:1px solid #ffffff32}
+.footer-links-grid .footer-eyebrow{font-size:10px;letter-spacing:.16em;color:#a5bea7;font-weight:700;text-transform:uppercase}
+.footer-profile h3{font-size:29px;font-weight:400;line-height:1.2;margin:19px 0}
+.footer-profile p{max-width:330px;color:#b3c7b6;font-size:12px;line-height:1.8;margin-bottom:16px}
+.footer-profile .footer-model{font-size:11px;color:#c3d5c4}
+.footer-links-grid ul{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:12px}
+.footer-links-grid li a{color:#d5e3d4;text-decoration:none;font-size:12px;line-height:1.5;transition:color .2s}
+.footer-links-grid li a:hover,.footer-links-grid li a:focus-visible{color:#c9e79b;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.footer-links-grid{grid-template-columns:1fr 1fr;gap:36px 24px;padding-bottom:45px}.footer-profile{grid-column:1/-1}.footer-profile h3{font-size:25px}}
+@media(max-width:390px){.footer-links-grid{grid-template-columns:1fr}.footer-profile{grid-column:auto}}
