@@ -14,6 +14,7 @@ const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/
 const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Dra. Selma Ríos Meléndez | Genómica y biotecnología vegetal" },
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Dra. Selma Ríos Meléndez" },
       { property: "og:description", content: "Biotecnología vegetal, genómica funcional y resiliencia de las plantas." },
       { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
