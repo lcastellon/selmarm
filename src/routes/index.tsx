@@ -47,7 +47,7 @@ const copy = {
     specimenDesc: "Gametófito hidratado · Ríos-Meléndez et al. (2021), fig. 1a",
     visionKicker: "01 / PERSPECTIVA",
     visionTitle: "La vida encuentra formas de persistir.",
-    visionText: "La investigación de la Dra. Selma Ríos Meléndez aborda procesos biológicos asociados a la respuesta de las plantas frente a condiciones ambientales adversas. Su producción científica explora genomas de organelos, mecanismos de regulación génica y tolerancia al déficit hídrico.",
+    visionText: "La investigación de la Dra. Selma Ríos Meléndez aborda procesos biológicos asociados a la respuesta de las plantas, especialmente de musgos, frente a condiciones ambientales adversas. Su producción científica explora genomas de organelos, mecanismos de regulación génica y tolerancia al déficit hídrico.",
     topicsKicker: "02 / LÍNEAS DE ESTUDIO",
     topicsTitle: "De la célula al ecosistema.",
     topicsIntro: "Ejes que conectan las herramientas moleculares con preguntas sobre la adaptación y la biotecnología vegetal.",
