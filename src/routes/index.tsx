@@ -291,7 +291,7 @@ function Index() {
           <div className="section-heading"><h2>{t.topicsTitle}</h2><p>{t.topicsIntro}</p></div>
           <div className="research-grid">
             {t.topics.map((topic,i) => <article className="research-item" key={topic.tag}>
-              <div className="research-item-top"><span>{topic.tag}</span><span className="research-symbol">{i===0?<Dna size={27} strokeWidth={1.1}/>:i===1?<Leaf size={27} strokeWidth={1.1}/>:i===2?<span className="symbol-wave">≈</span>:<span className="symbol-wave">✳</span>}</span></div>
+              <div className="research-item-top"><span>{topic.tag}</span><span className="research-symbol">{i===0?<Dna size={27} strokeWidth={1.1}/>:i===1?<Leaf size={27} strokeWidth={1.1}/>:i===2?<span className="symbol-wave">≈</span>:<FlaskConical size={27} strokeWidth={1.1}/>}</span></div>
               <h3>{topic.title}</h3><p><ScientificText text={topic.desc}/></p><span className="research-number">0{i+1}</span>
             </article>)}
           </div>
