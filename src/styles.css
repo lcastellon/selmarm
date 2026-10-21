@@ -172,3 +172,9 @@ body {margin:0}
 .academic-contact-form select:focus{border-color:#d5e8c4;box-shadow:0 0 0 2px #d5e8c424}
 .academic-contact-form .contact-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
 @media(max-width:760px){.contact-form-row{grid-template-columns:1fr}}
+
+
+/* Footer credit link: keep the footer's own light tone instead of the browser's default blue. */
+.footer-bottom a,.laia-credit{color:#f3f5ea;text-decoration:none}
+.footer-bottom a:hover,.footer-bottom a:focus-visible,.laia-credit:hover,.laia-credit:focus-visible{text-decoration:underline;text-underline-offset:3px;color:#ffffff}
+
