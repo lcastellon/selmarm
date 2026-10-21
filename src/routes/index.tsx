@@ -93,7 +93,7 @@ const copy = {
     contactText: "¿Te interesa una colaboración académica, hacer una consulta o conocer más sobre sus investigaciones? Envía tu mensaje mediante el formulario.",
     formName: "Nombre", formInstitution: "Institución", formEmail: "Correo electrónico", formSubject: "Motivo del contacto", formMessage: "Mensaje", formSend: "Enviar mensaje", formNote: "Los mensajes se enviarán al correo institucional de la doctora mediante un servicio externo.", formSelect: "Selecciona una opción", formReasons: ["Colaboración científica", "Consulta académica", "Tesis o estancia", "Publicaciones", "Otro"],
     contactButton: "Abrir perfil académico",
-    footer: "Biotecnología vegetal · Investigación científica",
+    footer: "Biotecnología vegetal",
     rights: "Sitio académico",
     langLabel: "Idioma del sitio",
     footerNavigation: "Navegación",
@@ -165,7 +165,7 @@ const copy = {
     contactText: "Interested in academic collaboration, have a question, or want to learn more about her research? Use the contact form below.",
     formName: "Name", formInstitution: "Institution", formEmail: "Email address", formSubject: "Reason for contact", formMessage: "Message", formSend: "Send message", formNote: "Messages are delivered to the researcher’s institutional email by an external form service.", formSelect: "Select an option", formReasons: ["Scientific collaboration", "Academic inquiry", "Thesis or research stay", "Publications", "Other"],
     contactButton: "Open academic profile",
-    footer: "Plant biotechnology · Scientific research",
+    footer: "Plant biotechnology",
     rights: "Academic website",
     langLabel: "Website language",
     footerNavigation: "Navigation",
@@ -406,7 +406,7 @@ function Index() {
               </ul>
             </div>
           </div>
-          <div className="footer-bottom"><span>© {new Date().getFullYear()} SELMA RÍOS MELÉNDEZ</span><span>{t.footer}</span><span>{t.rights} · ES / EN</span></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} SELMA RÍOS MELÉNDEZ</span><span>{t.footer} · <a href="https://laiasd.com" target="_blank" rel="noopener noreferrer" className="laia-credit">made by LAIA ↗</a></span><span>{t.rights} · ES / EN</span></div>
         </div>
       </footer>
     </main>
