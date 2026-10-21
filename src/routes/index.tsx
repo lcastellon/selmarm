@@ -74,7 +74,7 @@ const copy = {
     storyPublication: "Explorar la publicación relacionada",
     galleryKicker: "04 / ATLAS VISUAL",
     galleryTitle: "El organismo, de cerca.",
-    galleryIntro: "Galería contextual con una figura de investigación publicada y fotografías de referencia utilizadas en Moss Genomics. Estas últimas no se presentan como documentación taxonómica confirmada de la especie.",
+    galleryIntro: "",
     galleryItems: [
       { tag: "01 / FIGURA CIENTÍFICA", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
       { tag: "02 / IMAGEN DE REFERENCIA", title: "Cultivo en caja de Petri", description: "Fotografía ilustrativa del trabajo con material vegetal en laboratorio; identificación de especie no confirmada.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
@@ -145,7 +145,7 @@ const copy = {
     storyPublication: "Explore related paper",
     galleryKicker: "04 / VISUAL ATLAS",
     galleryTitle: "A closer look at the organism.",
-    galleryIntro: "A contextual gallery featuring a published research figure and reference photographs used by Moss Genomics. The latter are not presented as confirmed taxonomic documentation of this species.",
+    galleryIntro: "",
     galleryItems: [
       { tag: "01 / SCIENTIFIC FIGURE", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
       { tag: "02 / REFERENCE IMAGE", title: "Petri-dish culture", description: "Illustrative photograph of laboratory plant material; species identification has not been confirmed.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
