@@ -205,7 +205,7 @@ body {margin:0}
 
 
 /* Temporary photographic botanical hero, readily replaceable with Selma's chosen stock image. */
-.hero-botanical-photo{position:relative;flex:1;min-height:500px;overflow:hidden;background-color:#254835;background-image:url("/selma-leaf.webp");background-position:center;background-size:cover}
+.hero-botanical-photo{position:relative;flex:1;min-height:500px;overflow:hidden;background-color:#254835;background-image:url("/selma-leaf-fixed.webp");background-position:center;background-size:cover}
 .hero-botanical-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#102e2214 5%,#102d2370 100%);pointer-events:none}
 .hero-botanical-note{position:absolute;bottom:28px;left:8%;z-index:1;font-size:10px;font-weight:700;letter-spacing:.19em;color:#f1f4e7}
 @media(max-width:760px){.hero-botanical-photo{min-height:390px;background-position:center}}
@@ -213,3 +213,8 @@ body {margin:0}
 /* No overlay text on the supplied leaf photograph. */
 .hero-botanical-note{display:none}
 .hero-botanical-overlay{background:transparent}
+
+/* Actual Plants logo provided by the researcher, replacing the abstract icon. */
+.featured-study-logo{background:#f6f7fa;color:#3a6d00;gap:18px}
+.featured-study-logo img{display:block;width:min(82%,290px);height:auto;object-fit:contain}
+.featured-study-logo span{color:#50701d}
