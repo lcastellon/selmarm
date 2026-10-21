@@ -67,12 +67,12 @@ const copy = {
     focusTitle: "Los musgos: una etapa fundamental.",
     focusText: "Pseudocrossidium replicatum ofrece una ventana a la extraordinaria capacidad de ciertos organismos vegetales para tolerar la desecación. Sus organelos y mecanismos de expresión génica han sido objeto de publicaciones científicas.",
     storyKicker: "03 / CIENCIA EXPLICADA",
-    storyTitle: "La vida después de la desecación.",
-    storyIntro: "Una ruta para explorar cómo el musgo, sus tejidos y sus mecanismos moleculares ayudan a comprender la tolerancia a la pérdida de agua.",
+    storyTitle: "De las plantas a los compuestos antimicrobianos.",
+    storyIntro: "Una ruta divulgativa sobre la relación entre las señales de estrés vegetal, el metabolismo especializado y la evaluación de moléculas bioactivas.",
     storySteps: [
-      {number: "01", title: "El organismo", body: "Pseudocrossidium replicatum es un musgo que ofrece un modelo para investigar la tolerancia a la desecación.", detail: "La observación de gametófitos y protonema permite reconocer estructuras y respuestas visibles.", link: ARTICLE, linkText: "Investigación sobre tolerancia (2021)"},
-      {number: "02", title: "La respuesta al estrés", body: "La desecación constituye un estrés extremo. La investigación estudia mecanismos moleculares inducibles ante estas condiciones.", detail: "Las figuras experimentales ayudan a conectar la morfología de sus tejidos con los procesos fisiológicos.", link: ARTICLE, linkText: "Leer estudio experimental (2021)"},
-      {number: "03", title: "Los genes", body: "La medición de expresión génica permite estudiar la regulación molecular. La validación de genes de referencia es esencial para RT-qPCR.", detail: "Un artículo de 2025 identifica y evalúa genes de referencia en el tejido protonemal de esta especie.", link: QPCR_ARTICLE, linkText: "Consultar publicación RT-qPCR (2025)"},
+      {number:"01",title:"Estímulo ambiental",body:"Las plantas perciben señales del ambiente, incluidos distintos tipos de estrés.",detail:"Estas señales pueden poner en marcha mecanismos celulares y rutas de defensa.",link:ANTIMICROBIAL_ARTICLE,linkText:"Revisión científica (2026)"},
+      {number:"02",title:"Respuesta metabólica",body:"La señalización y la regulación génica pueden modificar la producción de metabolitos especializados.",detail:"Las herramientas multiómicas ayudan a entender la relación entre rutas moleculares y sustancias producidas.",link:ANTIMICROBIAL_ARTICLE,linkText:"Metabolismo especializado (2026)"},
+      {number:"03",title:"Potencial antimicrobiano",body:"Algunos metabolitos de origen vegetal muestran propiedades de interés antimicrobiano.",detail:"La actividad, seguridad y viabilidad de cada compuesto requieren evaluación experimental antes de cualquier aplicación.",link:ANTIMICROBIAL_ARTICLE,linkText:"Consultar artículo de 2026"},
     ],
     storyPublication: "Explorar la publicación relacionada",
     galleryKicker: "04 / ATLAS VISUAL",
@@ -101,7 +101,7 @@ const copy = {
     footerInstitutional: "Enlaces institucionales",
     footerProfile: "Perfil científico",
     footerDescription: "Metabolismo vegetal, biotecnología y compuestos con potencial antimicrobiano.",
-    footerModel: "Modelo de estudio",
+    footerModel: "Investigación previa",
     footerResearch: "Investigación",
     footerStory: "Metabolitos bioactivos",
     footerGallery: "Galería científica",
@@ -139,12 +139,12 @@ const copy = {
     focusTitle: "Mosses: a foundational chapter.",
     focusText: "Pseudocrossidium replicatum offers a window into the remarkable ability of certain plants to withstand desiccation. Its organelles and gene-expression mechanisms have been investigated in scientific publications.",
     storyKicker: "03 / SCIENCE EXPLAINED",
-    storyTitle: "Life after desiccation.",
-    storyIntro: "A visual journey exploring how moss structure, tissues, and molecular mechanisms help researchers understand tolerance to water loss.",
+    storyTitle: "From plants to antimicrobial compounds.",
+    storyIntro: "An accessible introduction to the connections between plant stress signaling, specialized metabolism, and evaluation of bioactive molecules.",
     storySteps: [
-      {number: "01", title: "The organism", body: "Pseudocrossidium replicatum is a moss that provides a model for studying desiccation tolerance.", detail: "Observing gametophytes and protonema helps reveal visible structures and responses.", link: ARTICLE, linkText: "Desiccation-tolerance research (2021)"},
-      {number: "02", title: "Stress response", body: "Desiccation is an extreme stress. Research investigates inducible molecular mechanisms under these conditions.", detail: "Experimental figures help connect tissue morphology with underlying physiological processes.", link: ARTICLE, linkText: "Read experimental study (2021)"},
-      {number: "03", title: "The genes", body: "Gene-expression measurements help investigate molecular regulation. Reference-gene validation is fundamental to RT-qPCR.", detail: "A 2025 paper identifies and evaluates reference genes in the species' protonemal tissue.", link: QPCR_ARTICLE, linkText: "RT-qPCR publication (2025)"},
+      {number:"01",title:"Environmental stimuli",body:"Plants detect environmental signals, including different forms of stress.",detail:"These signals can activate cellular mechanisms and defense pathways.",link:ANTIMICROBIAL_ARTICLE,linkText:"Scientific review (2026)"},
+      {number:"02",title:"Metabolic responses",body:"Signaling and gene regulation can change the production of specialized metabolites.",detail:"Multi-omics approaches help connect molecular pathways with the substances produced.",link:ANTIMICROBIAL_ARTICLE,linkText:"Specialized metabolism (2026)"},
+      {number:"03",title:"Antimicrobial potential",body:"Some plant-derived metabolites exhibit properties of antimicrobial research interest.",detail:"Activity, safety, and feasibility require experimental validation before any application.",link:ANTIMICROBIAL_ARTICLE,linkText:"Read the 2026 article"},
     ],
     storyPublication: "Explore related paper",
     galleryKicker: "04 / VISUAL ATLAS",
@@ -173,7 +173,7 @@ const copy = {
     footerInstitutional: "Institutional links",
     footerProfile: "Scientific profile",
     footerDescription: "Plant metabolism, biotechnology, and compounds with antimicrobial potential.",
-    footerModel: "Study organism",
+    footerModel: "Previous research",
     footerResearch: "Research",
     footerStory: "Bioactive metabolites",
     footerGallery: "Scientific gallery",
@@ -183,7 +183,7 @@ const copy = {
 };
 
 const publications = [
-  { title: "Stress-induced plant specialized metabolism: signaling, multi-omics integration, and plant-derived antimicrobial metabolites", journal: "Plants 15 (2), 193", year: 2026 },
+  { title: "Stress-induced plant specialized metabolism: signaling, multi-omics integration, and plant-derived antimicrobial metabolites", journal: "Plants 15 (2), 193", year: 2026, doi: ANTIMICROBIAL_ARTICLE },
   { title: "Effect of Essential Oils on Postharvest Management of Anthracnose Associated with Colletotrichum gloeosporioides in Mango", journal: "Plants 14 (21), 3249", year: 2025 },
   { title: "Selection and Validation of Reference Genes for RT-qPCR in Protonemal Tissue of Pseudocrossidium replicatum", journal: "Plants 14 (12), 1752", year: 2025, doi: QPCR_ARTICLE },
   { title: "Pseudocrossidium replicatum is a fully desiccation-tolerant moss that expresses an inducible molecular mechanism in response to severe stress", journal: "Plant Molecular Biology 107 (4), 387–404", year: 2021, doi: ARTICLE },
@@ -275,8 +275,13 @@ function Index() {
         </div>
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
-          <a className="hero-science-image" href={ARTICLE} target="_blank" rel="noopener noreferrer" aria-label="Fuente científica: figura 1a"><img src={HERO_IMAGE} alt={language === "es" ? "Gametófito hidratado de Pseudocrossidium replicatum, figura científica 1a" : "Hydrated Pseudocrossidium replicatum gametophyte, scientific figure 1a"} /></a>
-          <div className="visual-caption"><span><ScientificText text={t.specimen}/><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
+          <div className="hero-bioactive-art" role="img" aria-label={language === "es" ? "Ilustración conceptual de hojas y moléculas vegetales" : "Conceptual illustration of plant leaves and molecules"}>
+              <div className="bioactive-orbit"><span className="molecule m1"/><span className="molecule m2"/><span className="molecule m3"/><span className="molecule m4"/></div>
+              <Leaf className="bioactive-leaf leaf-one" strokeWidth={0.65}/><Leaf className="bioactive-leaf leaf-two" strokeWidth={0.65}/><Leaf className="bioactive-leaf leaf-three" strokeWidth={0.65}/>
+              <FlaskConical className="bioactive-flask" strokeWidth={0.7}/>
+              <span className="bioactive-label">PLANT METABOLITES · 2026</span>
+            </div>
+          <div className="visual-caption"><span><span>{language === "es" ? "Plantas y metabolitos bioactivos" : "Plants and bioactive metabolites"}</span><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
         </div>
       </section>
 
@@ -298,18 +303,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      <section className="focus-section">
-        <div className="focus-art">
-          <div className="micrograph-heading">{t.microscopy}</div>
-          <div className="micrograph-crop" role="img" aria-label={t.microscopyCaption}>
-            <img src={FIGURE_SIX} loading="lazy" alt="" />
-          </div>
-          <div className="micrograph-caption"><span><ScientificText text={t.microscopyCaption}/></span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
-        </div>
-        <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p><ScientificText text={t.focusText}/></p><div className="focus-scientific"><span><ScientificText text={t.specimen}/></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
-      </section>
-
 
       <section className="story-section" id="desecacion">
         <div className="section-container">
@@ -333,6 +326,30 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <section className="featured-study section-container" id="articulo-destacado">
+        <div className="section-kicker">{language === "es" ? "04 / PUBLICACIÓN DESTACADA · 2026" : "04 / FEATURED PUBLICATION · 2026"}</div>
+        <div className="featured-study-layout">
+          <div className="featured-study-mark"><FlaskConical size={70} strokeWidth={0.75}/><span>PLANTS · 15(2) · 193</span></div>
+          <div className="featured-study-copy">
+            <h2>{language === "es" ? "Metabolitos vegetales frente a la resistencia antimicrobiana." : "Plant metabolites and antimicrobial resistance."}</h2>
+            <p><ScientificText text="Stress-Induced Plant Specialized Metabolism: Signaling, Multi-Omics Integration, and Plant-Derived Antimicrobial Metabolites to Combat Antimicrobial Resistance"/></p>
+            <p>{language === "es" ? "Revisión científica publicada en Plants (2026), sobre metabolismo especializado, señalización y herramientas multiómicas para explorar metabolitos antimicrobianos de origen vegetal." : "A review published in Plants (2026) on specialized metabolism, signaling, and multi-omics methods for exploring plant-derived antimicrobial metabolites."}</p>
+            <a href={ANTIMICROBIAL_ARTICLE} className="text-link" target="_blank" rel="noopener noreferrer">{language === "es" ? "Leer publicación" : "Read publication"} <ArrowUpRight size={17}/></a>
+          </div>
+        </div>
+      </section>
+      <section className="focus-section">
+        <div className="focus-art">
+          <div className="micrograph-heading">{t.microscopy}</div>
+          <div className="micrograph-crop" role="img" aria-label={t.microscopyCaption}>
+            <img src={FIGURE_SIX} loading="lazy" alt="" />
+          </div>
+          <div className="micrograph-caption"><span><ScientificText text={t.microscopyCaption}/></span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
+        </div>
+        <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p><ScientificText text={t.focusText}/></p><div className="focus-scientific"><span><ScientificText text={t.specimen}/></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
+      </section>
+
 
       <section className="gallery-section section-container" id="galeria">
         <div className="section-kicker">{t.galleryKicker}</div>
