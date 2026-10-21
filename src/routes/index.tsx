@@ -328,7 +328,7 @@ function Index() {
       <section className="featured-study section-container" id="articulo-destacado">
         <div className="section-kicker">{language === "es" ? "04 / PUBLICACIÓN DESTACADA · 2026" : "04 / FEATURED PUBLICATION · 2026"}</div>
         <div className="featured-study-layout">
-          <div className="featured-study-mark"><FlaskConical size={70} strokeWidth={0.75}/><span>PLANTS · 15(2) · 193</span></div>
+          <div className="featured-study-mark featured-study-logo"><img src="/plants-logo.webp" alt="Plants — revista científica" loading="lazy" /><span>PLANTS · 15(2) · 193</span></div>
           <div className="featured-study-copy">
             <h2>{language === "es" ? "Metabolitos vegetales frente a la resistencia antimicrobiana." : "Plant metabolites and antimicrobial resistance."}</h2>
             <p><ScientificText text="Stress-Induced Plant Specialized Metabolism: Signaling, Multi-Omics Integration, and Plant-Derived Antimicrobial Metabolites to Combat Antimicrobial Resistance"/></p>
