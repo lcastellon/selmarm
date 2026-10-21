@@ -202,3 +202,10 @@ body {margin:0}
 .featured-study-copy p:first-of-type{font-family:Georgia,serif;font-style:italic;color:#325641;font-size:17px}
 .featured-study-copy .text-link{margin-top:7px}
 @media(max-width:760px){.hero-bioactive-art{min-height:370px}.bioactive-leaf.leaf-one{left:14%;top:13%}.bioactive-leaf.leaf-two{right:7%}.featured-study{padding-top:75px;padding-bottom:75px}.featured-study-layout{grid-template-columns:1fr;gap:27px}.featured-study-mark{min-height:180px}.featured-study-copy h2{font-size:36px}}
+
+
+/* Temporary photographic botanical hero, readily replaceable with Selma's chosen stock image. */
+.hero-botanical-photo{position:relative;flex:1;min-height:500px;overflow:hidden;background-color:#254835;background-image:url("https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1600&q=85");background-position:center;background-size:cover}
+.hero-botanical-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#102e2214 5%,#102d2370 100%);pointer-events:none}
+.hero-botanical-note{position:absolute;bottom:28px;left:8%;z-index:1;font-size:10px;font-weight:700;letter-spacing:.19em;color:#f1f4e7}
+@media(max-width:760px){.hero-botanical-photo{min-height:390px;background-position:center}}
