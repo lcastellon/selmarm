@@ -107,3 +107,11 @@ body {margin:0}
 .micrograph-caption{display:flex;flex-direction:column;gap:8px;font-size:11px;line-height:1.65;margin-top:17px;color:#4d6958}
 .micrograph-caption a{font-size:10px;color:#276047;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.focus-art{height:auto;min-height:330px;padding:28px 6%}.micrograph-crop{aspect-ratio:2.85}.micrograph-caption{font-size:10px}}
+
+
+/* Research photo in hero: isolate only panel a of the original journal figure. */
+.hero-science-image{display:flex;flex:1;align-items:center;justify-content:center;min-height:480px;background:#e9e9e1;padding:34px 5%;overflow:hidden;position:relative}
+.hero-science-image img{display:block;width:100%;height:auto;max-width:none;aspect-ratio:3.16/1;object-fit:cover;object-position:center top;transform:scale(1.02);box-shadow:0 18px 55px #00180c21}
+.hero-visual .visual-topline{background:#234638}
+.hero-visual .visual-caption{background:#234638}
+@media(max-width:760px){.hero-science-image{min-height:280px;padding:23px 3%}.hero-science-image img{aspect-ratio:3.16/1}}
