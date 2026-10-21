@@ -115,3 +115,5 @@ body {margin:0}
 .hero-visual .visual-topline{background:#234638}
 .hero-visual .visual-caption{background:#234638}
 @media(max-width:760px){.hero-science-image{min-height:280px;padding:23px 3%}.hero-science-image img{aspect-ratio:3.16/1}}
+/* Latin binomials always set in italic, wherever they appear in copy. */
+.scientific-name{font-style:italic}

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, X } from "lucide-react";
+import { ScientificText } from "@/components/scientific-text";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
 const FIGURE_ONE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
@@ -192,7 +193,7 @@ function Index() {
           <div className="small-label"><span className="label-dot"/>{t.eyebrow}</div>
           <p className="hero-overline">{t.subheading}</p>
           <h1>{t.heading.split(" ").slice(0,-2).join(" ")} <em>{t.heading.split(" ").slice(-2).join(" ")}</em></h1>
-          <p className="hero-intro">{t.intro}</p>
+          <p className="hero-intro"><ScientificText text={t.intro}/></p>
           <div className="hero-actions">
             <a className="button-dark" href="#investigacion">{t.explore} <ArrowDownRight size={18}/></a>
             <a className="text-link" href={SCHOLAR} target="_blank" rel="noopener noreferrer">{t.scholar} <ArrowUpRight size={17}/></a>
@@ -202,13 +203,13 @@ function Index() {
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
           <a className="hero-science-image" href={ARTICLE} target="_blank" rel="noopener noreferrer" aria-label="Fuente científica: figura 1a"><img src={FIGURE_ONE} alt={language === "es" ? "Gametófito hidratado de Pseudocrossidium replicatum, figura científica 1a" : "Hydrated Pseudocrossidium replicatum gametophyte, scientific figure 1a"} /></a>
-          <div className="visual-caption"><span><i>{t.specimen}</i><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
+          <div className="visual-caption"><span><ScientificText text={t.specimen}/><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
         </div>
       </section>
 
       <section id="vision" className="vision-section section-container">
         <div className="section-kicker">{t.visionKicker}</div>
-        <div className="vision-body"><h2>{t.visionTitle}</h2><p>{t.visionText}</p></div>
+        <div className="vision-body"><h2>{t.visionTitle}</h2><p><ScientificText text={t.visionText}/></p></div>
         <div className="vision-icon"><Leaf size={56} strokeWidth={0.8}/></div>
       </section>
 
@@ -219,7 +220,7 @@ function Index() {
           <div className="research-grid">
             {t.topics.map((topic,i) => <article className="research-item" key={topic.tag}>
               <div className="research-item-top"><span>{topic.tag}</span><span className="research-symbol">{i===0?<Dna size={27} strokeWidth={1.1}/>:i===1?<Leaf size={27} strokeWidth={1.1}/>:i===2?<span className="symbol-wave">≈</span>:<span className="symbol-wave">✳</span>}</span></div>
-              <h3>{topic.title}</h3><p>{topic.desc}</p><span className="research-number">0{i+1}</span>
+              <h3>{topic.title}</h3><p><ScientificText text={topic.desc}/></p><span className="research-number">0{i+1}</span>
             </article>)}
           </div>
         </div>
@@ -231,9 +232,9 @@ function Index() {
           <div className="micrograph-crop" role="img" aria-label={t.microscopyCaption}>
             <img src={FIGURE_SIX} loading="lazy" alt="" />
           </div>
-          <div className="micrograph-caption"><span>{t.microscopyCaption}</span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
+          <div className="micrograph-caption"><span><ScientificText text={t.microscopyCaption}/></span><a href={ARTICLE} target="_blank" rel="noopener noreferrer">{t.microscopySource} ↗</a></div>
         </div>
-        <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p>{t.focusText}</p><div className="focus-scientific"><span><i>Pseudocrossidium replicatum</i></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
+        <div className="focus-copy"><div className="section-kicker">{t.focus}</div><h2>{t.focusTitle}</h2><p><ScientificText text={t.focusText}/></p><div className="focus-scientific"><span><ScientificText text={t.specimen}/></span><span>BRYOPHYTA / POTTIACEAE</span></div></div>
       </section>
 
       <section id="publicaciones" className="publications-section section-container">
@@ -242,7 +243,7 @@ function Index() {
         <div className="publications-list">
           {publications.map((pub, i) => <article key={pub.title} className="publication-row">
             <div className="publication-year">{pub.year}</div>
-            <div className="publication-content"><span className="publication-index">RESEARCH PAPER / {String(i+1).padStart(2,"0")}</span><h3>{pub.title}</h3><p>{pub.journal}</p></div>
+            <div className="publication-content"><span className="publication-index">RESEARCH PAPER / {String(i+1).padStart(2,"0")}</span><h3><ScientificText text={pub.title}/></h3><p>{pub.journal}</p></div>
             <a href={SCHOLAR} target="_blank" rel="noopener noreferrer" aria-label={`Find publication on Google Scholar: ${pub.title}`} className="publication-action"><ArrowUpRight size={21}/></a>
           </article>)}
         </div>
