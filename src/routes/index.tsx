@@ -35,7 +35,7 @@ type Language = "es" | "en";
 const copy = {
   es: {
     nav: ["Visión", "Investigación", "Publicaciones", "Contacto"],
-    eyebrow: "CUADERNO DE INVESTIGACIÓN · BIOTECNOLOGÍA VEGETAL",
+    eyebrow: "BIOTECNOLOGÍA VEGETAL",
     subheading: "Ciencia de la vida vegetal",
     heading: "Descifrar la resistencia de las plantas.",
     intro: "Desde los mecanismos moleculares de los musgos tolerantes a la desecación hasta las respuestas de los cultivos al estrés hídrico: una mirada al lenguaje de la adaptación vegetal.",
@@ -106,7 +106,7 @@ const copy = {
   },
   en: {
     nav: ["Perspective", "Research", "Publications", "Contact"],
-    eyebrow: "RESEARCH NOTEBOOK · PLANT BIOTECHNOLOGY",
+    eyebrow: "PLANT BIOTECHNOLOGY",
     subheading: "The science of plant life",
     heading: "Decoding plant resilience.",
     intro: "From the molecular mechanisms of desiccation-tolerant mosses to crop responses to water stress: an exploration of the language of plant adaptation.",
