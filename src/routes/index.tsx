@@ -80,7 +80,7 @@ const copy = {
     galleryIntro: "",
     galleryItems: [
       { tag: "01 / FIGURA CIENTÍFICA", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "02 / IMAGEN DE REFERENCIA", title: "Cultivo en caja de Petri", description: "Fotografía ilustrativa del trabajo con material vegetal en laboratorio; identificación de especie no confirmada.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
+      { tag: "02 / IMAGEN DE REFERENCIA", title: "Propagación in vitro", description: "Imagen de trabajo en laboratorio.", url: "/propagacion-in-vitro.webp", source: null, isFigure: false },
       { tag: "03 / IMAGEN DE REFERENCIA", title: "Protonema", description: "Imagen de referencia del sitio Moss Genomics; identificación de especie no confirmada.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Consultar artículo original",
@@ -152,7 +152,7 @@ const copy = {
     galleryIntro: "",
     galleryItems: [
       { tag: "01 / SCIENTIFIC FIGURE", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "02 / REFERENCE IMAGE", title: "Petri-dish culture", description: "Illustrative photograph of laboratory plant material; species identification has not been confirmed.", url: MOSS_ASSET + "culture-petri.jpg", source: null, isFigure: false },
+      { tag: "02 / REFERENCE IMAGE", title: "In vitro propagation", description: "Laboratory work image.", url: "/propagacion-in-vitro.webp", source: null, isFigure: false },
       { tag: "03 / REFERENCE IMAGE", title: "Protonema", description: "Reference image from Moss Genomics; species identification has not been confirmed.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Read original paper",
