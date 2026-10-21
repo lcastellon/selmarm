@@ -4,7 +4,12 @@ import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, 
 import { ScientificText } from "@/components/scientific-text";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
-const FIGURE_ONE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
+// Hero block: reserved for the doctor's own portrait photo. It still shows
+// figure 1a from the 2021 paper, so swap HERO_IMAGE for the portrait when it
+// arrives, re-tune .hero-science-image for a vertical photo, and drop the
+// figure-only labels (t.figure, t.specimen/t.specimenDesc) plus the article
+// link that wraps the image.
+const HERO_IMAGE = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig1_HTML.png";
 const FIGURE_SIX = "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11103-021-01167-3/MediaObjects/11103_2021_1167_Fig6_HTML.png";
 const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 
@@ -202,7 +207,7 @@ function Index() {
         </div>
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
-          <a className="hero-science-image" href={ARTICLE} target="_blank" rel="noopener noreferrer" aria-label="Fuente científica: figura 1a"><img src={FIGURE_ONE} alt={language === "es" ? "Gametófito hidratado de Pseudocrossidium replicatum, figura científica 1a" : "Hydrated Pseudocrossidium replicatum gametophyte, scientific figure 1a"} /></a>
+          <a className="hero-science-image" href={ARTICLE} target="_blank" rel="noopener noreferrer" aria-label="Fuente científica: figura 1a"><img src={HERO_IMAGE} alt={language === "es" ? "Gametófito hidratado de Pseudocrossidium replicatum, figura científica 1a" : "Hydrated Pseudocrossidium replicatum gametophyte, scientific figure 1a"} /></a>
           <div className="visual-caption"><span><ScientificText text={t.specimen}/><small>{t.specimenDesc}</small></span><span className="caption-index">01 / 01</span></div>
         </div>
       </section>
