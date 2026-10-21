@@ -4,6 +4,8 @@ import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, Leaf, Menu, 
 import { ScientificText } from "@/components/scientific-text";
 
 const SCHOLAR = "https://scholar.google.com/citations?user=-EUCc3sAAAAJ&hl=es";
+// Set to the verified recipient email address before enabling form delivery.
+const CONTACT_EMAIL = "";
 // Hero block: reserved for the doctor's own portrait photo. It still shows
 // figure 1a from the 2021 paper, so swap HERO_IMAGE for the portrait when it
 // arrives, re-tune .hero-science-image for a vertical photo, and drop the
@@ -88,7 +90,8 @@ const copy = {
     journal: "REVISTA / REFERENCIA",
     contactKicker: "06 / CONTACTO",
     contactTitle: "La ciencia crece en colaboración.",
-    contactText: "Para consultar publicaciones, líneas de investigación y actividad académica, visita el perfil científico de la Dra. Selma Ríos Meléndez.",
+    contactText: "¿Te interesa una colaboración académica, hacer una consulta o conocer más sobre sus investigaciones? Envía tu mensaje mediante el formulario.",
+    formName: "Nombre", formEmail: "Correo electrónico", formSubject: "Asunto", formMessage: "Mensaje", formSend: "Preparar mensaje", formNote: "El formulario abrirá tu aplicación de correo para enviar el mensaje.", formRequired: "Completa todos los campos para continuar.",
     contactButton: "Abrir perfil académico",
     footer: "Biotecnología vegetal · Investigación científica",
     rights: "Sitio académico",
@@ -159,7 +162,8 @@ const copy = {
     journal: "JOURNAL / REFERENCE",
     contactKicker: "06 / CONTACT",
     contactTitle: "Science grows through collaboration.",
-    contactText: "For publications, research topics, and academic activities, visit Dr. Selma Ríos Meléndez’s scientific profile.",
+    contactText: "Interested in academic collaboration, have a question, or want to learn more about her research? Use the contact form below.",
+    formName: "Name", formEmail: "Email address", formSubject: "Subject", formMessage: "Message", formSend: "Prepare message", formNote: "The form will open your email application to send your message.", formRequired: "Complete all fields to continue.",
     contactButton: "Open academic profile",
     footer: "Plant biotechnology · Scientific research",
     rights: "Academic website",
@@ -224,6 +228,7 @@ function Index() {
   const [language, setLanguage] = useState<Language>("es");
   const [menuOpen, setMenuOpen] = useState(false);
   const [storyStep, setStoryStep] = useState(0);
+  const [contactForm, setContactForm] = useState({name:"",email:"",subject:"",message:""});
   useEffect(() => {
     const stored = window.localStorage.getItem("selma-language");
     if (stored === "es" || stored === "en") setLanguage(stored);
@@ -358,7 +363,22 @@ function Index() {
       <footer id="contacto" className="contact-section">
         <div className="section-container contact-inner">
           <div className="section-kicker">{t.contactKicker}</div>
-          <div className="contact-main"><h2>{t.contactTitle}</h2><div><p>{t.contactText}</p><a className="button-light" href={SCHOLAR} target="_blank" rel="noopener noreferrer">{t.contactButton}<ExternalLink size={17}/></a></div></div>
+          <div className="contact-main"><div><h2>{t.contactTitle}</h2><p className="contact-lede">{t.contactText}</p></div>
+            <form className="academic-contact-form" onSubmit={(event) => {
+              event.preventDefault();
+              if (!CONTACT_EMAIL) return;
+              const subject = encodeURIComponent(contactForm.subject);
+              const body = encodeURIComponent(`${contactForm.message}\n\n—\n${contactForm.name}\n${contactForm.email}`);
+              window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+            }}>
+              <label>{t.formName}<input required autoComplete="name" maxLength={120} value={contactForm.name} onChange={e=>setContactForm(v=>({...v,name:e.target.value}))} /></label>
+              <label>{t.formEmail}<input required type="email" autoComplete="email" maxLength={200} value={contactForm.email} onChange={e=>setContactForm(v=>({...v,email:e.target.value}))} /></label>
+              <label>{t.formSubject}<input required maxLength={200} value={contactForm.subject} onChange={e=>setContactForm(v=>({...v,subject:e.target.value}))} /></label>
+              <label>{t.formMessage}<textarea required rows={5} maxLength={5000} value={contactForm.message} onChange={e=>setContactForm(v=>({...v,message:e.target.value}))} /></label>
+              <button className="button-light" type="submit" disabled={!CONTACT_EMAIL}>{t.formSend} <ArrowUpRight size={18}/></button>
+              <p className="form-status" role="status">{CONTACT_EMAIL ? t.formNote : (language === "es" ? "Pendiente de configurar el correo de destino para habilitar el envío." : "A recipient email address must be configured before sending is enabled.")}</p>
+            </form>
+          </div>
           <div className="footer-links-grid">
             <div className="footer-profile">
               <span className="footer-eyebrow">{t.footerProfile}</span>
