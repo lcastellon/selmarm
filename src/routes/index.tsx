@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import heroPlants from "@/assets/hero-plants.jpg";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, FlaskConical, Leaf, Menu, X } from "lucide-react";
 import { ScientificText } from "@/components/scientific-text";
 
@@ -295,7 +296,7 @@ function Index() {
         </div>
         <div className="hero-visual">
           <div className="visual-topline"><span>{t.figure}</span><Dna size={22} strokeWidth={1}/></div>
-          <div className="hero-botanical-photo" role="img" aria-label={language === "es" ? "Fotografía botánica de hojas verdes, imagen provisional" : "Botanical photograph of green leaves, temporary image"}>
+          <div className="hero-botanical-photo" role="img" aria-label={language === "es" ? "Fotografía de musgo y helechos verdes con gotas de rocío, imagen provisional" : "Photograph of green moss and ferns with dew drops, temporary image"} style={{ backgroundImage: `url(${heroPlants})` }}>
             <div className="hero-botanical-overlay" aria-hidden="true" />
             <span className="hero-botanical-note">PLANT BIOTECHNOLOGY / 2026</span>
           </div>
