@@ -26,6 +26,7 @@ body {margin:0}
 .hero-copy .hero-name em{color:#78946d;font-weight:400}
 .hero-display{font-family:Libre Baskerville,Georgia,serif;font-style:italic;font-size:clamp(20px,2.05vw,28px);line-height:1.35;color:#2c4a37;max-width:560px;margin:20px 0 0}
 .hero-role{max-width:520px;color:#667a6c;font-size:15px;line-height:1.85;margin:26px 0 0}
+.inline-quiet-link{color:inherit;text-decoration:none;cursor:pointer}.inline-quiet-link:hover,.inline-quiet-link:focus-visible{text-decoration:underline;text-underline-offset:3px}
 .hero-credentials{font-size:10px;font-weight:800;letter-spacing:.18em;color:#64806d;margin:14px 0 0;text-transform:uppercase}
 .hero-intro{max-width:520px;color:#667a6c;font-size:15px;line-height:1.9;margin:32px 0 0}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin:36px 0 90px}

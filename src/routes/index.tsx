@@ -17,6 +17,21 @@ const ARTICLE = "https://doi.org/10.1007/s11103-021-01167-3";
 const QPCR_ARTICLE = "https://doi.org/10.3390/plants14121752";
 const ANTIMICROBIAL_ARTICLE = "https://doi.org/10.3390/plants15020193";
 const MOSS_ASSET = "https://raw.githubusercontent.com/lcastellon/mossgenomics/main/src/assets/";
+const CIBA_URL = "https://www.cibatlaxcala.ipn.mx/";
+
+// Shows "(CIBA)" as a link to the centre's official page while the text itself
+// keeps the same colour and weight as the surrounding copy.
+function CibaLink({ text }: { text: string }) {
+  const parts = text.split("(CIBA)");
+  if (parts.length < 2) return <>{text}</>;
+  return (
+    <>
+      {parts[0]}
+      <a className="inline-quiet-link" href={CIBA_URL} target="_blank" rel="noopener noreferrer" title="Centro de Investigación en Biotecnología Aplicada — IPN">(CIBA)</a>
+      {parts.slice(1).join("(CIBA)")}
+    </>
+  );
+}
 
 
 export const Route = createFileRoute("/")({
@@ -271,7 +286,7 @@ function Index() {
           <h1 className="hero-display">{t.heading}</h1>
           <div className="hero-profile">
             <h2 className="hero-name">Dra. {t.nameFirst} <em>{t.nameLast}</em></h2>
-            <p className="hero-role">{t.role}</p>
+            <p className="hero-role"><CibaLink text={t.role}/></p>
             <p className="hero-credentials">{t.credentials}</p>
           </div>
           <div className="hero-actions">
