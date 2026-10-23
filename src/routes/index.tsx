@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroPlants from "@/assets/hero-plants.jpg";
+import propagacionInVitro from "@/assets/propagacion-in-vitro.jpg";
 import { ArrowDownRight, ArrowUpRight, BookOpen, Dna, ExternalLink, FlaskConical, Leaf, Menu, X } from "lucide-react";
 import { ScientificText } from "@/components/scientific-text";
 
@@ -98,7 +99,7 @@ const copy = {
     galleryIntro: "",
     galleryItems: [
       { tag: "", title: "Gametófito hidratado", description: "Panel a) de la figura publicada en Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "", title: "Propagación in vitro", description: "Imagen de trabajo en laboratorio.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
+      { tag: "", title: "Propagación in vitro", description: "Cultivos in vitro en frascos de vidrio; imagen de referencia.", url: propagacionInVitro, source: null, isFigure: false },
       { tag: "", title: "Protonema", description: "Imagen de referencia del sitio Moss Genomics; identificación de especie no confirmada.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Consultar artículo original",
@@ -171,7 +172,7 @@ const copy = {
     galleryIntro: "",
     galleryItems: [
       { tag: "", title: "Hydrated gametophyte", description: "Panel a) from the figure published in Plant Molecular Biology (2021).", url: HERO_IMAGE, source: ARTICLE, isFigure: true },
-      { tag: "", title: "In vitro propagation", description: "Laboratory work image.", url: "/propagacion-in-vitro-fix.webp", source: null, isFigure: false },
+      { tag: "", title: "In vitro propagation", description: "In vitro cultures in glass jars; reference image.", url: propagacionInVitro, source: null, isFigure: false },
       { tag: "", title: "Protonema", description: "Reference image from Moss Genomics; species identification has not been confirmed.", url: MOSS_ASSET + "protonema.jpg", source: null, isFigure: false },
     ],
     galleryCitation: "Read original paper",
