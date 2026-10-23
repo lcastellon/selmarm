@@ -118,7 +118,6 @@ const copy = {
     footerInstitutional: "Enlaces institucionales",
     footerProfile: "Perfil científico",
     footerDescription: "Metabolismo vegetal, biotecnología y compuestos con potencial antimicrobiano.",
-    footerModel: "Investigación previa",
     footerResearch: "Investigación",
     footerStory: "Metabolitos bioactivos",
     footerGallery: "Galería científica",
@@ -192,7 +191,6 @@ const copy = {
     footerInstitutional: "Institutional links",
     footerProfile: "Scientific profile",
     footerDescription: "Plant metabolism, biotechnology, and compounds with antimicrobial potential.",
-    footerModel: "Previous research",
     footerResearch: "Research",
     footerStory: "Bioactive metabolites",
     footerGallery: "Scientific gallery",
@@ -422,7 +420,6 @@ function Index() {
               <span className="footer-eyebrow">{t.footerProfile}</span>
               <h3>Dra. Selma Ríos Meléndez</h3>
               <p>{t.footerDescription}</p>
-              <p className="footer-model">{t.footerModel}: <ScientificText text="Pseudocrossidium replicatum" /></p>
             </div>
             <nav aria-label={t.footerNavigation}>
               <span className="footer-eyebrow">{t.footerNavigation}</span>
