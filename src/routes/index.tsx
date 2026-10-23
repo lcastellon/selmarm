@@ -42,8 +42,8 @@ const copy = {
     nameFirst: "Selma",
     nameLast: "Ríos Meléndez",
     heading: "Explorando el potencial antimicrobiano de las plantas.",
-    role: "Profesora-Investigadora del Centro de Investigación en Biotecnología Aplicada (CIBA) del IPN. Biología Molecular, Biotecnología Vegetal. Metabolismo Antimicrobiano",
-    credentials: "Investigación. Biotecnología de Plantas. SNII I",
+    role: "Profesora-Investigadora del Centro de Investigación en Biotecnología Aplicada (CIBA) del IPN. Biología Molecular · Biotecnología Vegetal · Metabolismo Antimicrobiano",
+    credentials: "Investigación · Biotecnología de Plantas · SNII I",
     explore: "Explorar investigación",
     scholar: "Perfil en Google Académico",
     scroll: "DESPLAZARSE PARA EXPLORAR",
@@ -117,7 +117,7 @@ const copy = {
     nameLast: "Ríos Meléndez",
     heading: "Exploring the antimicrobial potential of plants.",
     role: "Professor-Researcher at the Centro de Investigación en Biotecnología Aplicada (CIBA) of the Instituto Politécnico Nacional (IPN). Molecular biology, plant biotechnology, antimicrobial metabolism.",
-    credentials: "Research. Plant Biotechnology. SNII I",
+    credentials: "Research · Plant Biotechnology · SNII I",
     explore: "Explore research",
     scholar: "Google Scholar profile",
     scroll: "SCROLL TO EXPLORE",
@@ -268,10 +268,12 @@ function Index() {
       <section id="inicio" className="hero-section">
         <div className="hero-copy">
           <div className="small-label"><span className="label-dot"/>{t.eyebrow}</div>
-          <h1 className="hero-name">{t.nameFirst} <em>{t.nameLast}</em></h1>
-          <p className="hero-display">{t.heading}</p>
-          <p className="hero-role">{t.role}</p>
-          <p className="hero-credentials">{t.credentials}</p>
+          <h1 className="hero-display">{t.heading}</h1>
+          <div className="hero-profile">
+            <h2 className="hero-name">Dra. {t.nameFirst} <em>{t.nameLast}</em></h2>
+            <p className="hero-role">{t.role}</p>
+            <p className="hero-credentials">{t.credentials}</p>
+          </div>
           <div className="hero-actions">
             <a className="button-dark" href="#investigacion">{t.explore} <ArrowDownRight size={18}/></a>
             <a className="text-link" href={SCHOLAR} target="_blank" rel="noopener noreferrer">{t.scholar} <ArrowUpRight size={17}/></a>
